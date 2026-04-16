@@ -1,0 +1,66 @@
+all_code = True
+
+def calculo(weight,height):
+    print("----- C A L C U L A N D O  S E U  I M C -----")
+    print(f"IMC = Peso({weight}) / (Altura({height}) x Altura({height}))")
+    imc = weight / (height * height)
+    return imc
+
+def classificação(imc):
+    if imc < 18.5:
+        print("----- R E S U L T A D O S  F I N A I S -----")
+        print(f"Nome: {name}")
+        print(f"Idade: {age}")
+        print(f"Peso: {weight}")
+        print(f"Altura: {height}")
+        print(f"IMC = {imc:.2f} - Abaixo do peso.")
+        print("--------------------------------------------")
+    elif imc >= 18.5 and imc <= 24.9:
+        print("----- R E S U L T A D O S  F I N A I S -----")
+        print(f"Nome: {name}")
+        print(f"Idade: {age}")
+        print(f"Peso: {weight}")
+        print(f"Altura: {height}")
+        print(f"IMC = {imc:.2f} - Peso normal.")
+        print("--------------------------------------------")
+    elif imc >= 25 and imc <= 29.9:
+        print("----- R E S U L T A D O S  F I N A I S -----")
+        print(f"Nome: {name}")
+        print(f"Idade: {age}")
+        print(f"Peso: {weight}")
+        print(f"Altura: {height}")
+        print(f"IMC = {imc:.2f} - Sobrepeso.")
+        print("--------------------------------------------")
+    else:
+        print("----- R E S U L T A D O S  F I N A I S -----")
+        print(f"Nome: {name}")
+        print(f"Idade: {age}")
+        print(f"Peso: {weight}")
+        print(f"Altura: {height}")
+        print(f"IMC = {imc:.2f} - Obesidade.")
+        print("--------------------------------------------")
+    
+
+while all_code == True:
+    information = True
+    while information == True:
+        print("------ M E N U  A C A D E M I A (CALCULO IMC) ------")
+        name = input("Seu nome: ")
+        age = int(input("Sua idade: "))
+        weight = float(input("Seu peso: "))
+        height = float(input("Sua altura: "))
+        correct_data = input("Seus dados estão corretos? [S/N]: ")
+        if correct_data == "s" or correct_data == "S":
+            break
+        print("--------------------------------------------")
+
+    calculate = True
+
+    while calculate == True:
+        calculo(weight,height)
+        imc = calculo(weight,height)
+        classificação(imc)
+        again = input("Deseja calcular denovo? [S/N]: ")
+        break
+    if again == "n" or again == "N":
+        break
