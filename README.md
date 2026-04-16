@@ -11,4 +11,4 @@ Projeto simples em Python que calcula o Índice de Massa Corporal (IMC) com base
 1 - Abra o terminal na pasta do projeto
 2- Excute:
 
-python calculo_imc.py
+python calculadora_imc.py
